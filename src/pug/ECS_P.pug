@@ -1,0 +1,141 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./css/ECS_S.css")
+        link(rel="icon" type="images/PNG" href="./img/JKR_Logo2.png")
+        link(rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css")
+        script(src="http://code.jquery.com/jquery-latest.min.js")
+        title KH ECS
+    body
+        .container 
+            .UserContent2 
+                .running_background
+                .running_task
+                    .running_header Running Task
+                    .running_dot 
+                        .dot.dot1
+                        .dot.dot2
+                        .dot.dot3
+                        .dot.dot4
+                        .dot.dot5
+                        .dot.dot6
+                        .dot.dot7
+                    .running_cancle
+            .aside
+                .transport
+                    .menu#fork_transport
+                        p
+                            span.xi-truck
+                            span Fork Transport
+
+                    .menu#wes_inbound
+                        p
+                            span.xi-truck
+                            span WES Inbound
+                    .menu#wes_outbound 
+                        p
+                            span.xi-truck
+                            span WES Outbound
+                .DB_Edit 
+                    .menu#external_db
+                        p
+                            span.xi-hdd
+                            span External DB
+                    .menu#inbound_db
+                        p
+                            span.xi-hdd
+                            span Inbound DB
+                    .menu#outbound_db
+                        p
+                            span.xi-hdd
+                            span Outbound DB
+                .control_panel
+                    .menu#takeControl
+                        p
+                            span.xi-user
+                            span Take Control
+                    .menu#Pause 
+                        p
+                            span.xi-pause
+                            //span.xi-play
+                            span Pause
+                    .menu#EmergencyStop
+                        p
+                            span.xi-stop
+                            span Emergency Stop
+            .main 
+                .section_1
+                    .content_1
+                        .menu_area 
+                            .empty_header
+                            //클릭 시 해당 user+해당메뉴이름 display block
+                            .UserContent
+                                .user_fork_transport
+                                    .f_area1
+                                        .f_from 
+                                            input(type="text" id="input_f_from") 
+                                        .f_forkimg 
+                                            img(src="./img/CDD16.png")
+                                        .f_to
+                                            input(type="text" id="input_f_to")
+                                    .f_area2
+                                        .f_send#f_send
+                                            p SEND DATA
+                                .user_wes_inbound 
+                                .user_wes_outbound
+                                .user_external_db
+                                    p MODIFY DATABASE
+                                    .modify_modal
+                                        .modify_modal_headerArea
+                                        .modify_modal_btnArea
+                                            .addBtn.modalBtn#addBtn Add POD
+                                            .deleteBtn.modalBtn#deleteBtn Delete POD
+                                        .modify_modal_cancleArea
+                                            .cancleBtn.modalBtn Cancle
+                                        .add_Type
+                                            .add_TPMA.TPM#add_TPMA TPMA
+                                            .add_TPMB.TPM#add_TPMB TPMB
+                    .content_2
+                        .port_area 
+                            .port#A
+                                .numbering A
+                                .numbering_size 1200*1000 1100*1100
+                            .port#B
+                                .numbering B
+                                .numbering_size 1200*1000 
+                            .port#C
+                                .numbering C
+                                .numbering_size 1200*1000 1100*1100
+                            .port#D
+                                .numbering D
+                                .numbering_size 1100*1100
+                .section_2
+                    .content_3
+                        .fork_area
+                            .rack
+                                .port#3-1 
+                                    .numbering 3-1
+                                .port#3-2
+                                    .numbering 3-2
+                                .port.No_rack
+                            .rack
+                                .port#2-1
+                                    .numbering 2-1
+                                .port#2-2
+                                    .numbering 2-2
+                                .port#2-3
+                                    .numbering 2-3
+                            .rack
+                                .port#1-1
+                                    .numbering 1-1
+                                .port#1-2
+                                    .numbering 1-2
+                                .port#1-3
+                                    .numbering 1-3
+                    .content_4
+                        .rack_area#3DPS
+    script(src="./js/Fork_Transport.js")
+    script(src="./js/DB_View.js")
+    script(src="./js/DB_Modification.js")
